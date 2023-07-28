@@ -67,7 +67,10 @@ section {
   background:#43A047;
   max-height:10%;
 }
-
+.message {
+  display: none;
+  background-color: black;
+}
 
     {% endblock %}
 
@@ -78,13 +81,7 @@ background: #094F76;">
         
         <div class="form">
             <h3>FAÇA LOGIN NA SUA CONTA</h3>
-          <!-- <form class="register-form">
-            <input type="text" placeholder="name"/>
-            <input type="password" placeholder="password"/>
-            <input type="text" placeholder="email address"/>
-            <button>create</button>
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-          </form> -->
+          
           <form class="login-form" method="post">
               {% csrf_token %}
             <input type="text" name="username" placeholder="usuário"/>
@@ -102,7 +99,9 @@ background: #094F76;">
 {% endblock %}
 
 {%block js %}
+<div style="display: none;">
 $('.message a').click(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
  });
+</div>
 {% endblock %}

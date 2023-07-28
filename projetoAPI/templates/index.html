@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -84,7 +84,7 @@
   <header id="header" class="d-flex align-items-center" style="
   width: 100%">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"style="width: 600px;margin-left: -41px"><a href="#">DETECCÃO  FRAUDE CARTÃO DE CRÉDITO</a></h1>
+      <h1 class="logo me-auto"style="width: 600px;margin-left: -41px font-size: 28px"><a href="#">DETECCÃO  FRAUDE CARTÃO DE CRÉDITO</a></h1>
       <!--CREDIT CARD FRAUD DETECTION -->
       <nav id="navbar" class="navbar" style="margin-left: -21px;">
         <ul>
@@ -93,14 +93,13 @@
    
           <li><a class="nav-link scrollto" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'dashboard' %}">Dashboard</a></li>
-      <!--<li><a class="nav-link scrollto" href="{% url 'about' %}">Sobre</a></li>--> <!--About-->
-          <li><a class="nav-link scrollto" href="{% url 'detection' %}">Detecção</a></li> <!--Deteccao-->
+          
           <li class="dropdown">
             <a class="dropdown-toggle scrollto" data-toggle="dropdown" href="#">Administração
-            <span class="caret"></span></a> <!-- Adiministration-->
+            <span class="caret"></span></a> <!-- Administração-->
             <ul class="dropdown-menu">
               <li><a href="{% url 'upload_credit_data' %}">Upload de Arquivos de Dados de Crédito</a></li>
-              <!-- Upload Credit Data Files -->
+              <!-- Upload de Arquivos de Dados de Crédito -->
             </ul>
           </li>
           <li class="dropdown">
@@ -108,7 +107,7 @@
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="{% url 'reports' %}">Relatórios de Arquivos</a></li>
-              <!--Files Reports-->
+              <!--Relatórios de Arquivos-->
             </ul>
           </li>
     
@@ -120,9 +119,7 @@
           <h2 style="margin-left: 20px; font-size: 25px;width: 80px;"> Olá {{request.user.username}}</h2>
           {% else %}
           <li><a class="nav-link scrollto" href="/">Home</a></li>
-          <!--<li><a class="nav-link scrollto" href="{% url 'about' %}">Sobre</a></li>--> <!--About-->
-          <li><a class="nav-link scrollto" href="{% url 'detection' %}">Detecção</a></li> <!--Deteccao-->
-          <!--About-->
+          
           <li><a class="getstarted scrollto" href="{% url 'login2' %}">LOGIN</a></li>
           {% endif %}
         </ul>
@@ -151,31 +148,34 @@
 
     {% block footer %}
   <!-- ======= Footer ======= -->
+  
   <footer id="footer">
-    <div class="container">
-      <h3>Fale Conosco</h3>
-      <p>contato.timedetecçãofraude@gmail.com<p>
-        
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Projeto de Detecção de Fraude do Cartão de Crédito</span></strong>. Todos Direitos Reservados  <!--All rights reserved-->
-        <!--Credit Card Fraud Detection Project -->
-      </div>
-      <div class="credits">
-        <!-- Todos os links no rodapé devem permanecer intactos. -->
-        <!-- Você pode excluir os links apenas se tiver adquirido a versão pro. -->
-        <!-- Informações de licenciamento: https://bootstrapmade.com/license/ -->
-        <!-- Adquira a versão pro com formulário de contato PHP/AJAX funcionando: https://bootstrapmade.com/green-free-one-page-bootstrap-template/ -->
-        Projetado pelo  <a href="#">Time 10 de desenvolvimento da Pantanaldev</a>
-      </div>
+    <div class="copyright" style="padding-top:30px ;">
+      &copy; Copyright <strong><span>Projeto de Detecção de Fraude do Cartão de Crédito</span></strong>. Todos Direitos Reservados  <!--All rights reserved-->
+      <!--Credit Card Fraud Detection Project -->
     </div>
-  </footer><!-- End Footer -->
+    <div class="credits">
+    
+      Projetado pelo  <a href="#">Time 10 de desenvolvimento da Pantanaldev</a>
+    </div>
+    <div class="container">
+      
+      <h3 style="color: black;">Fale Conosco</h3>
+      <p style="color: black;">contato.timedetecçãofraude@gmail.com<p>
+      
+         
+      <div class="social-links" style="background-color: black;">
+        <a href="#" class="twitter" style = "background-color: black;"><i class="bx bxl-twitter"style = "display: none;"></i></a>
+        <a href="#" class="facebook"style = "background-color: black;"><i class="bx bxl-facebook"style = "display: none;"></i></a>
+        <a href="#" class="instagram"style = "background-color: black;"><i class="bx bxl-instagram"style = "display: none;"></i></a>
+        <a href="#" class="google-plus"style = "background-color: black;"><i class="bx bxl-skype"style = "display: none;"></i></a>
+        <a href="#" class="linkedin"style = "background-color: black;"><i class="bx bxl-linkedin"style = "display: none;"></i></a>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- End Footer -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   {% endblock %}
 

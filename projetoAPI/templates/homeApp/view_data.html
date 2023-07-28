@@ -10,11 +10,11 @@ Home | Fraud Detection System
 <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
 <style>
-    /* Add your custom CSS styles for the table here */
+    
     .table-container {
     width: 90%;
-    overflow-x: auto; /* Add horizontal scrollbar */
-    max-height: 500px; /* Adjust the height as per your requirement */
+    overflow-x: auto; 
+    max-height: 500px; 
     margin: 5% 5% 5% 5%;
   }
     .example {
@@ -28,9 +28,9 @@ Home | Fraud Detection System
       border: 1px solid #ddd;
       padding: 8px;
       text-align: left;
-      white-space: nowrap; /* Prevent text wrapping */
-      overflow: hidden; /* Hide any overflowing content */
-      text-overflow: ellipsis; /* Show ellipsis for long text */
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
       width: 170px;
     }
   
@@ -91,11 +91,7 @@ Home | Fraud Detection System
 	<h1 id="header2">VER DADOS</h1>
 
 </div>
-<!--
-<div class="container" style="width: 90%; margin-top: 13px;">
-     Display the HTML table generated from DataFrame 
-    {{ html_table|safe }}-->
-<!--</div>-->
+
 <div class="table-container">
 <table id="example">
 <thead>
@@ -215,22 +211,15 @@ Home | Fraud Detection System
             btns.addClass('btn btn-primary btn-sm ');
             btns.removeClass('dt-button');
           },
-          /*
-          paging: true, // Keep pagination
-          searching: true, // Enable searching on the entire dataset
-          searchPanes: {
-           // Use 'full' to search through all pages
-          paginate: 'full'
-          },
-          lengthChange: false,*/
+          
           columnDefs: [
             {
-              targets: 0, // The first column (index 0)
+              targets: 0, // Primeira coluna (index 0)
               searchable: true,
               orderable: true,
             },
             {
-              targets: '_all', // All other columns
+              targets: '_all', // Todas outras colunas
               searchable: false,
               orderable: true,
             },

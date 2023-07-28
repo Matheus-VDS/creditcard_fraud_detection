@@ -34,9 +34,11 @@ Home | Fraud Detection System
 			<h3 class="fraud-header">ESCOLHA O TIPO DE DADO QUE DESEJA VERIFICAR PARA DETECÇÃO DE FRAUDE</h3>
 		</div>
 		<div id="fraud-buttons-container">
-			<a href="{% url 'enter_form_data_manually' %}"><div class="fraud-buttons">INSERIR DADOS NO FORMULÁRIO MANUALMENTE</div></a>
-			<a href="{% url 'add_files_single'%} "><div class="fraud-buttons">UPLOAD ARQUIVO CSV COM ÚNICO REGISTRO</div></a>
-			<a href="{% url 'add_files_multi' %}"><div class="fraud-buttons">UPLOAD ARQUIVO CSV COM MÚLTIPLOS REGISTROS</div></a>
+			
+			<form>
+			<a href="{% url 'add_files_multi' %}"><div class="fraud-buttons">UPLOAD ARQUIVO CSV COM SUPORTE A CLIENTE </div></a>
+		    </form>
+
 		</div>
 	</div>
   </section><!-- End Hero -->

@@ -36,22 +36,36 @@ margin-bottom: 92px;
 
 	<div class=fraud-container>
 		<div class=fraud-header-container>
-			<h3 class="fraud-header">UPLOAD ARQUIVO CSV COM MÚLTIPLOS REGISTROS</h3>
+			<h3 class="fraud-header">UPLOAD ARQUIVO CSV COM REGISTRO DO CPF  DO CLIENTE</h3>
 		</div>
 		<div class="singlefilediv">
-				<form method="POST" action="{% url 'predict_csv_multi' %}">
-					{% csrf_token %}
-				<label>Escolha o Arquivo CSV com Múltiplos Registros</label><br>
-				<input class="file" type="FILE" name=""><br>
-				<input  class="btn" type="submit" name="" value="SUBMETER"style="background-color: #4471e2;">
+			
+			<form method="POST" action="{% url 'predict_csv_multi' %}" enctype="multipart/form-data">
+				{% csrf_token %}
+				<label for="filecpf" style="width: 100%; text-align: center;">Insira o CPF do Cliente</label><br>
+				<input type="text" name="data_file_name" id="filecpf" placeholder="CPF" style="width: 100%; text-align: center;"><br>
+			
+				<label>Escolha o Arquivo CSV de Múltiplos Registros com o Registro CPF incluso</label><br>
+				<input class="file" type="file" name="csv_file"><br> 
+				<input class="btn" type="submit" name="" value="SUBMETER" style="background-color: #4471e2;">
 			</form>
 		</div>
+		
 	</div>
 
     </section><!-- End Hero -->
   
     </main>
-  
+	<script>
+		function updateFileName() {
+			var fileInput = document.getElementById('file');
+			var filenameInput = document.getElementById('filename');
+		
+			if (fileInput.files.length > 0) {
+				filenameInput.value = fileInput.files[0].name;
+			}
+		}
+	</script>
 {% endblock %}
 
 

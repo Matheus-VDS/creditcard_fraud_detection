@@ -10,7 +10,7 @@ html,body{
 
 /* ________ header box___________________________________  */
 #header-container{
-	/*background-color:#5cb874;*/
+	
     background-color: #094F76;
 	height: 100px;
 	box-sizing: border-box;
@@ -55,8 +55,7 @@ html,body{
 	margin-top: 30px;
 }
 .fraud-container .fraud-header-container{
-    background-color: #094F76;/*
-	background-color:#5cb874; */
+    background-color: #094F76;
 	margin-top: 0px ;
 	border: 1px solid black;
 }
@@ -97,8 +96,7 @@ html,body{
 	font-size: 20px;
 }
 #upload-header-container{
-    background-color: #094F76;/*
-	background-color:#5cb874; */
+    background-color: #094F76;
 	margin-top: 0px ;
 	border: 1px solid black;
 }
@@ -137,8 +135,7 @@ html,body{
 	color: #FFFFFF;
 	font-size: 15px;
 	margin: 40px auto 5px auto;
-    background-color: #094F76;/*
-	background-color: #5cb874;*/
+    background-color: #094F76;
 	border-style: none;
 }
 #upload-container .upload .upload-form #btn:hover{
